@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity() {
             if (name.isEmpty() || email.isEmpty()) {
                 Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
             } else {
+                // Correctly reference the Details activity
                 val intent = Intent(this, Details::class.java)
-                intent.putExtra("NAME", name)
-                intent.putExtra("EMAIL", email)
+                intent.putExtra("NAME", name) // Pass the name
+                intent.putExtra("EMAIL", email) // Pass the email
                 startActivity(intent)
             }
         }
